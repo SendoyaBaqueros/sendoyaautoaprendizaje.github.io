@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Pacientes CNS</title>
+    <style>
+        body {
+            margin: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(26, 138, 110);
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin-left: 10%;
+            padding-top: 10px;
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .list input {
+            margin-bottom: 20px;
+        }
+
+        .list label,
+        legend {
+            font-weight: bold;
+        }
+
+        fieldset {
+            background-color: rgb(49, 236, 211);
+            margin-top: 10px;
+        }
+
+        .radio-check-button {
+            margin-left: 10%;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container header">
+        <h1>Registro Pacientes Caja Nacional Salud</h1>
+    </div>
+    <div class="container">
+        <fieldset title="Datos Personales" style="background-color: rgb(49, 236, 211);">
+            <legend>Datos Personales</legend>
+            <div class="list">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" id="apellidos" name="apellidos" placeholder="">
+                <label for="sexo">Sexo</label>
+                <div class="radio-check-button">
+                    <input type="radio" name="genero" id="hombre" value="Hombre">
+                    <label for="hombre">Hombre</label>
+                    <input type="radio" name="genero" id="mujer" value="Mujer">
+                    <label for="mujer">Mujer</label>
+                </div>
+                <label for="fechaNacimiento">Fecha Nacimiento</label>
+                <input type="date" id="fecha" name="fecha">
+                <label for="direccion">Direccion</label>
+                <input type="text" id="direccion" name="direccion">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos Generados Examen</legend>
+            <div class="list">
+                <label for="alergias">Alergias</label>
+                <select name="alergias" id="alergias">
+                    <option value="maní">Maní</option>
+                    <option value="latex">Latex</option>
+                    <option value="polen">Polen</option>
+                    <option value="alimentaria">Alimentaria</option>
+                    <option value="polvo">Polvo</option>
+                    <option value="moho">moho</option>
+                    <option value="estacional">Estacional</option>
+                    <option value="mascotas">Mascotas</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <label for="tipoSangre">Tipo de Sangre</label>
+                <input type="text" id="tipo" name="tipoSangre">
+                <label for="relacionSocio">Relacion Directa Socio</label>
+                <select name="relacionSocio" id="relacionSocio">
+                    <option value="esposo(a)">Esposo(a)</option>
+                    <option value="hijo(a)">Hijo(a)</option>
+                    <option value="abuelo(a)">Abuelo(a)</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Datos datosExtras</legend>
+            <label for="operacionesAnteriores">Operaciones Anteriores</label>
+            <div class="radio-check-button">
+
+                <input type="radio" name="si" id="si" value="Si">
+                <label for="si">Si</label>
+                <input type="radio" name="no" id="no" value="No">
+                <label for="no">No</label>
+
+            </div>
+            <br>
+            <label for="enfermedades">Enfermedades De Base</label>
+            <br>
+            <div class="radio-check-button">
+
+                <input type="radio" name="diabetes" id="diabetes" value="Diabetes">
+                <label for="diabetes">Diabetes</label>
+                <input type="radio" name="enfermedadRenal" id="enfermedadRenal" value="EnfermedadRenal">
+                <label for="enfermedadRenal">Enfermedad Renal</label>
+                <input type="radio" name="enfemedadHepatica" id="enfemedadHepatica" value="EnfermedadHepatica">
+                <label for="enfemedadHepatica">Enfermedad Hepática</label>
+                <input type="radio" name="otro" id="otro" value="otro">
+                <label for="otro">Otro</label>
+            </div>
+        </fieldset>
+        <br>
+
+        <input type="button" name="registrar" id="registrar" value="Registrar">
+
+        <input type="button" name="cancelar" id="cancelar" value="Cancelar">
+
+
+    </div>
+</body>
+
+</html>
